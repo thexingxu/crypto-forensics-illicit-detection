@@ -1,0 +1,43 @@
+{
+    "project": "crypto-forensics-illicit-detection",
+    "train_time_steps": "1-34",
+    "test_time_steps": "35-49",
+    "n_train_samples": 29894,
+    "n_test_samples": 16670,
+    "n_features": 168,
+    "optimal_threshold_f1": 0.8324889419184052,
+    "optimal_f1_score": 0.8219178081701749,
+    "threshold_recall_80": 0.08046013308280604,
+    "model_benchmarks": [
+        {
+            "Model": "Random Forest (Balanced)",
+            "Illicit Precision": 0.7834,
+            "Illicit Recall": 0.7313,
+            "Illicit F1": 0.7564,
+            "PR-AUC": 0.7941,
+            "ROC-AUC": 0.939
+        },
+        {
+            "Model": "LightGBM (Scale Pos Weight)",
+            "Illicit Precision": 0.758,
+            "Illicit Recall": 0.7461,
+            "Illicit F1": 0.752,
+            "PR-AUC": 0.8049,
+            "ROC-AUC": 0.9387
+        }
+    ],
+    "feature_family_shares": [
+        {
+            "feature_family": "Local Transaction Attributes",
+            "gain_share_pct": 80.5606889852424
+        },
+        {
+            "feature_family": "1-Hop Neighborhood Aggregates",
+            "gain_share_pct": 19.352622238831508
+        },
+        {
+            "feature_family": "Graph Topology (Degree)",
+            "gain_share_pct": 0.08668877592608676
+        }
+    ]
+}
